@@ -14,7 +14,8 @@ script:
   - cd public
 
 deploy:
-  repo: meinto.github.io
+  repo: meinto/meinto.github.io
+  target_branch: master
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
