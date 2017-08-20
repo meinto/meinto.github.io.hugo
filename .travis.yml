@@ -1,3 +1,5 @@
+language: none
+
 sudo: true
 dist: trusty
 
@@ -5,14 +7,16 @@ install:
   - sudo apt-get --yes install snapd
   - sudo snap install hugo
   - git clone https://github.com/meinto/meinto.github.io.hugo.git
-  - git clone https://github.com/meinto/meinto.github.io.git
   - cd meinto.github.io.hugo
 
 script:
   - /snap/bin/hugo
+  - cd public
 
-after_success:
-  - rm -rf ../meinto.github.io/*
-  - cp -r public/* ../meinto.github.io
-  - cd ../meinto.github.io
-  - ls
+deploy:
+  repo: meinto.github.io
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
