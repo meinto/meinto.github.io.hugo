@@ -12,7 +12,7 @@ script:
   - /snap/bin/hugo
 
 after_success:
-  - rm -rf ../meinto.github.io/.
-  - cp public/. ../meinto.github.io/.
+  - rm -rf ../meinto.github.io/*
+  - cp -r public/* ../meinto.github.io
   - cd ../meinto.github.io
   - ls
