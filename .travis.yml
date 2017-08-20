@@ -12,6 +12,7 @@ install:
 script:
   - /snap/bin/hugo
   - cd public
+  - ls -la
 
 deploy:
   repo: meinto/meinto.github.io
