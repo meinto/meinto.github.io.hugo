@@ -1,4 +1,9 @@
 baseURL = "http://meinto.github.io/"
+copyright = "© Tobias Meinhardt"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "ananke"
+theme = "meinto"
+
+[params]
+  dateformat = "Jan 2, 2006" # Optional
+  latestSize = 4 # Optional
