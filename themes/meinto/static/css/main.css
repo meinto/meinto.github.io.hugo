@@ -1,0 +1,73 @@
+* {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; margin-before: 1em; margin-after: 1em; }
+h4 { font-size: 1.12em; margin-before: 1.33em; margin-after: 1.33em; }
+h5 { font-size: .83em; margin-before: 1.67em; margin-after: 1.67em; }
+h6 { font-size: .67em; margin-before: 2.33em; margin-after: 2.33em; }
+p { font-size: 1em; margin-before: 1em; margin-after: 1em; }
+
+body span,
+body p {
+  color: #333;
+}
+
+body a,
+.breadcrumbs a {
+  color: #f44336;
+}
+
+body a:hover,
+.breadcrumbs a:hover {
+  color: #d32f2f !important;
+}
+
+body > header {
+  border-top: 10px solid #f44336;
+  border-bottom: 4px solid #ddd;
+  margin-bottom: 20px;
+}
+
+body > header .tab {
+  display: inline-block;
+  padding: 20px 10px 20px 10px;
+}
+
+body > header .tab:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+body > header a {
+  color: #333;
+}
+
+.list > article {
+  overflow: hidden;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+body > footer {
+  border-top: 4px solid #ddd;
+  background-color: #f44336;
+  padding: 20px 0 20px 0;
+  margin-top: 20px;
+  color: #efefef;
+}
+
+body > footer a {
+  color: #efefef;
+}
+
+.breadcrumbs {
+  padding-bottom: 20px;
+}
+
+.right {
+  float: right;
+}
