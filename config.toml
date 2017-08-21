@@ -1,4 +1,4 @@
-baseURL = "http://meinto.github.io/"
+baseURL = "https://meinto.github.io/"
 copyright = "© Tobias Meinhardt {year}"
 languageCode = "en-us"
 title = "Tobias Meinhardt"
