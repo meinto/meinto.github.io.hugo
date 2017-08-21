@@ -1,0 +1,7 @@
+<a
+  href='{{ .Get "href" }}'
+  target='{{ .Get "target" }}'
+  {{ if (.Get "target") "==" "_blank" }}
+    rel="nofollow"
+  {{ end }}
+>{{ .Inner }}</a>

@@ -1,12 +1,16 @@
-<figure{{ if .Get "class" }} class="{{ .Get "class" }}"{{ end }}>
-  <amp-img src="{{ $.Site.BaseURL }}{{ .Get "src" }}" alt="{{ .Page.Title }} {{ .Get "src" }}" width={{ .Get "w" | default "640" }} height={{ .Get "h" | default "400"}} layout="responsive"></amp-img>
-  {{ if .Get "caption" }}
-  <figcaption>
-    {{ if .Get "href" }}
-    <a href="{{ .Get "href" }}" target="_blank">{{ .Get "caption" }}</a>
+<figure>
+  <img 
+    {{ if in (.Get "src") "http" }}
+      src='{{ .Get "src" }}'
     {{ else }}
-    {{ .Get "caption" }}
+      src='{{ .Site.BaseURL }}{{ .Get "src" }}'
     {{ end }}
-  </figcaption>
+  />
+
+  {{ if (.Inner) "!=" "" }}
+    <figcaption>
+        <p>{{ .Inner }}</p>
+    </figcaption>
   {{ end }}
+
 </figure>

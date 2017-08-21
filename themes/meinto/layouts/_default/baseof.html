@@ -27,26 +27,32 @@
     </header>
 
     <div class="row">
-      {{ partial "breadcrumb.html" . }}
+      <div class="small-12 columns">
+        {{ partial "breadcrumb.html" . }}
+      </div>
     </div>
 
     <main>
       <div class="main row">
-        {{ block "main" . }}{{ end }}
+        <div class="small-12 columns">
+          {{ block "main" . }}{{ end }}
+        </div>
       </div>
     </main>
 
     <footer>
       <div class="row">
-        {{ replace .Site.Copyright "{year}" (now.Format "2006") }}
-        
-        <span class="right">
-          {{ range where (where .Site.Pages "Section" "") ".Params.hidden" "==" false }}
-            <a
-              href="{{ .Permalink }}"
-            >{{ .Title }}</a> 
-          {{ end }}
-        </span>
+        <div class="small-12 columns">
+          {{ replace .Site.Copyright "{year}" (now.Format "2006") }}
+          
+          <span class="right">
+            {{ range where (where .Site.Pages "Section" "") ".Params.hidden" "==" false }}
+              <a
+                href="{{ .Permalink }}"
+              >{{ .Title }}</a> 
+            {{ end }}
+          </span>
+        </div>
       </div>
     </footer>
 

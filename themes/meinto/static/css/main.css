@@ -3,6 +3,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 200% !important;
+  margin-bottom: 0.95em !important;
+}
+
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; margin-before: 1em; margin-after: 1em; }
@@ -70,4 +81,18 @@ body > footer a {
 
 .right {
   float: right;
+}
+
+figure {
+  border: 4px solid #ddd;
+  margin-bottom: 20px;
+}
+
+figure > figcaption {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+figure > figcaption p {
+  margin-bottom: 0 !important;
 }
