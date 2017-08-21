@@ -13,7 +13,7 @@ Github erlaubt dem Standard User eine Website **kostenlos** auf deren Infrastruk
 
 ### Usage Limits
 
-Wer bei Github seinen Blog oder seine Website hosten möchte, muss sich an einige Rahmenbedingungen halten. Ansonsten wird man füher oder später freundlich von Github aufgefordert den Traffic auf den Github Servern zu reduzieren:
+Wer bei Github seinen Blog oder seine Website hosten möchte, muss sich an einige Rahmenbedingungen halten. Ansonsten wird man früher oder später freundlich von Github aufgefordert den Traffic auf den Github Servern zu reduzieren:
 
 - Maximalgröße des Repositories: 1 GB
 - Maximale Bandbreite pro Monat: 100 GB
@@ -23,7 +23,7 @@ Falls man mit seiner statischen Website an die Grenzen der Brandbreite stößt e
 
 ### Einrichtung von Github Pages
 
-Um eine Website auf Github Pages zu hosten muss als erstes ein entsprechendes Repository auf Github dafür angelegt werden. Der Repository Name muss in dem Fall immer mit dem Kürzel des Users oder der Organisation angangen und endet mit **github.io**. In meinem Fall war das **meinto.github.io**.
+Um eine Website auf Github Pages zu hosten muss als erstes ein entsprechendes Repository auf Github angelegt werden. Der Repository Name muss in dem Fall immer mit dem Kürzel des Users oder der Organisation anfangen und endet mit **github.io**. In meinem Fall war das **meinto.github.io**.
 
 {{% img src="images/tutorials/hugo-auf-github-pages-hosten/pages-repo-name.jpg" %}}
 Der Name des Github Pages Repositories muss mit dem Kürzel des Users anfangen und mit **github.io** enden.  
@@ -36,7 +36,7 @@ Nach der Anlage kann das Repository unter dem Reiter **Settings** für Github Pa
 Der default-Branch bei Pages ist der master-Branch. Dieser kann auch nicht geändert werden. Alles was sich auf dem master-Branch befindet wird von Github Pages als Grundlage genommen und veröffentlicht.
 {{%/ img %}}
 
-Die Standard-**Domain** lautet wird er Repository Name. In meinem Fall *meinto.github.io*. Es kann zwar eine eigene Domain hinterlegt werden, jedoch gehe ich hier nicht werder auf diese Feature ein...
+Die Standard-**Domain** lautet wird er Repository Name. In meinem Fall *meinto.github.io*. Es kann zwar eine eigene Domain hinterlegt werden, jedoch gehe ich hier nicht weiter auf diese Feature ein...
 
 ## Static Site Generator Jekyll oder Hugo
 
@@ -92,7 +92,7 @@ deploy:
     branch: master
 {{</ highlight >}}
 
-In meinem Fall veranlasst die `.travis.yml` dass eine **Ubuntu trusty Umgebung** zum builden des Projektes hochgefahren wird. Danach wird **hugo über snapd** sowie **pygments** für das Code Highlighting installiert. Im Anschluss wird das **Hugo Projekt** von meinem Github Account gecloned und gebuildet. Der `deploy` Block der `.travis.yml` ist für die Veröffentlichung auf dem Github Pages Repository zuständig. Im Gunde wird der von Hugo erstellte `public` Ordner auf dieses Repository gepushed.
+In meinem Fall veranlasst die `.travis.yml` dass eine **Ubuntu trusty Umgebung** zum builden des Projektes hochgefahren wird. Danach wird **hugo über snapd** sowie **pygments** für das Code Highlighting installiert. Im Anschluss wird das **Hugo Projekt** von meinem Github Account gecloned und gebuildet. Der `deploy` Block der `.travis.yml` ist für die Veröffentlichung auf dem Github Pages Repository zuständig. Im Grunde wird der von Hugo erstellte `public` Ordner auf dieses Repository gepushed.
 
 Github Pages macht dann den Rest. 
 
