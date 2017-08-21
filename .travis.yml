@@ -6,6 +6,7 @@ dist: trusty
 install:
   - sudo apt-get --yes install snapd
   - sudo snap install hugo
+  - sudo apt-get install python3-pygments
   - git clone --recursive -j8 https://github.com/meinto/meinto.github.io.hugo.git
   - cd meinto.github.io.hugo
 
