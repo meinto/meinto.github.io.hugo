@@ -4,4 +4,6 @@
 
 <title>{{ .Title }}</title>
 
-<meta name="description" content="{{ .Description | default .Title }}">
+<meta name="description" content="{{ .Params.Description | default .Title }}">
+
+<meta name="robots" content='{{ .Params.Seo_index | default "index" }}, follow'>
