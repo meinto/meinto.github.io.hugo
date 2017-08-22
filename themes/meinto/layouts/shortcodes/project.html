@@ -1,14 +1,17 @@
-<figure>
+<figure class="project">
   <img 
     {{ if in (.Get "src") "http" }}
       src='{{ .Get "src" }}'
     {{ else }}
-      src='{{ .Site.BaseURL }}{{ .Get "src" }}'
+      src='{{ .Site.BaseURL }}{{ .Get "image" }}'
     {{ end }}
   >
 
   {{ if (.Inner) "!=" "" }}
     <figcaption>
+        <a href='{{ .Get "url" }}' target="_blank" rel="nofollow">
+          <h4>{{ .Get "name" }}</h4>
+        </a>
         <p>{{ .Inner }}</p>
     </figcaption>
   {{ end }}

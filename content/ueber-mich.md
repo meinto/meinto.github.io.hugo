@@ -36,7 +36,7 @@ Leider konnten wir uns mit den Webseiten nicht ausreichend selbst finanzieren, w
 
 Für uns ging die Reise aber schon vorher weiter. Nach einem Jahr suchten wir uns alle einen neuen Job, da wir bisher von unseren Reserven gelebt hatten. Auf Dauer geht das nicht. :)
 
-**2003 - 2016 Software Entwickler bei JANUS DIE WERBEMANUFAKTUR**
+**2013 - 2016 Software Entwickler bei JANUS DIE WERBEMANUFAKTUR**
 
 Mich verschlug es nach dem einen Jahr nach Mannheim in eine Agentur - {{< link href="http://www.janus-wa.de/" target="_blank" >}}JANUS DIE WERBEMANUFAKTUR{{</ link >}}.
 

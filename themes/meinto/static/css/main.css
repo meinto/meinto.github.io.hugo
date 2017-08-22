@@ -138,3 +138,7 @@ ul.tags > li {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+figure.project img {
+  max-height: 300px;
+}

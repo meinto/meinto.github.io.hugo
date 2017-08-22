@@ -1,0 +1,12 @@
+<div class="list">
+  {{ range where .Data.Pages "Section" "!=" "" }}
+    
+    <article>
+      <h1>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <span>{{ .Summary }}</span>
+    </article>
+  
+  {{ end }}
+</div>
