@@ -5,7 +5,18 @@
       <h1>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h1>
+
       <span>{{ .Summary }}</span>
+
+      <div class="meta">
+        <span class="meta-tag"><strong>Veröffentlicht am:</strong> {{ .Date.Format "02.01.2006" }}</span>
+        <span class="meta-tag"><strong>Tags:</strong> 
+          {{ range $index, $element := .Params.Tags }}
+            {{ if gt $index 0 }},{{ end }}
+            <a href="{{ "/tags/" | relLangURL }}{{ $element | urlize }}">{{ $element }}</a>
+          {{ end }}
+        </span>
+      </div>
     </article>
   
   {{ end }}
