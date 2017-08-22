@@ -47,20 +47,23 @@
       <div class="main row">
         <div class="small-12 columns">
           {{ block "main" . }}{{ end }}
-        </div>
+        </div>  
       </div>
     </main>
 
     <footer>
       <div class="row">
         <div class="small-12 columns">
-          {{ replace .Site.Copyright "{year}" (now.Format "2006") }}
+          <span class="copyright">{{ replace .Site.Copyright "{year}" (now.Format "2006") }}</span>
           
           <span class="right">
-            {{ range where (where .Site.Pages "Section" "") ".Params.hidden" "==" false }}
-              <a
-                href="{{ .Permalink }}"
-              >{{ .Title }}</a> 
+            {{ range where .Site.Pages "Section" "" }}
+              {{ if eq (index .Params "show_in_meta_nav") "footer" }}
+                <a
+                  href="{{ .Permalink }}"
+                  class="tab"
+                >{{ .Title }}</a>
+              {{ end }}
             {{ end }}
           </span>
         </div>

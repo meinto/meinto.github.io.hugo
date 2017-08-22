@@ -62,12 +62,14 @@ body > header {
   margin-bottom: 20px;
 }
 
-body > header .tab {
+body > header .tab,
+body > footer .tab {
   display: inline-block;
   padding: 20px 10px 20px 10px;
 }
 
-body > header .tab:hover {
+body > header .tab:hover,
+body > footer .tab:hover {
   cursor: pointer;
   background-color: #ddd;
 }
@@ -85,9 +87,14 @@ body > header a {
 body > footer {
   border-top: 4px solid #ddd;
   background-color: #f44336;
-  padding: 20px 0 20px 0;
   margin-top: 20px;
   color: #efefef;
+}
+
+body > footer .copyright {
+  color: #efefef;
+  display: inline-block;
+  padding: 20px 0 20px 0;
 }
 
 body > footer a {
@@ -116,4 +123,18 @@ figure > figcaption {
 
 figure > figcaption p {
   margin-bottom: 0 !important;
+}
+
+ul.tags {
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+ul.tags > li {
+  border: 1px solid #ddd;
+  float: left;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }

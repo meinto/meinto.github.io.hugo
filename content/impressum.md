@@ -2,7 +2,7 @@
 title: "Impressum"
 date: 2017-08-20
 draft: false
-hidden: false
+show_in_meta_nav: "footer"
 ---
 
 Tobias Meinhardt  

@@ -4,4 +4,4 @@
 
 <title>{{ .Title }}</title>
 
-<meta name="description" content="{{ .Title }}">
+<meta name="description" content="{{ .Description | default .Title }}">
