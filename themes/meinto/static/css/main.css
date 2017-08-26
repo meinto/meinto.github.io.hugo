@@ -154,3 +154,26 @@ figure.project img {
   padding: 10px;
   margin-bottom: 20px;
 }
+
+form fieldset.error label {
+  color: #f44336 !important;
+}
+
+form fieldset.error input,
+form fieldset.error textarea {
+  border: 1px solid #f44336;
+}
+
+form textarea {
+  min-height: 250px;
+}
+
+form .button,
+form .button:focus {
+  background-color: #7CB342;
+  float: right;
+}
+
+form .button:hover {
+  background-color: #8BC34A;
+}
