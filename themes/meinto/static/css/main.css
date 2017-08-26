@@ -148,3 +148,9 @@ ul.tags > li {
 figure.project img {
   max-height: 300px;
 }
+
+.contact-form.warning {
+  background-color: yellowgreen;
+  padding: 10px;
+  margin-bottom: 20px;
+}

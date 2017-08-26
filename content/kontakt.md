@@ -1,0 +1,13 @@
+---
+title: "Kontakt"
+description: ""
+date: 2017-08-26
+draft: false
+show_in_meta_nav: "footer"
+type: "contact"
+---
+
+Tobias Meinhardt  
+**E-Mail**: tobias.meinhardt89@gmail.com  
+**Github**: {{< link href="https://github.com/meinto" target="_blank" >}}https://github.com/meinto{{</ link >}}  
+**Xing**: {{< link href="https://www.xing.com/profile/Tobias_Meinhardt5" target="_blank" >}}https://www.xing.com/profile/Tobias_Meinhardt5{{</ link >}}

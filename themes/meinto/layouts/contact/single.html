@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+  <article class="single">
+
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    <h2>Kontaktformular</h2>
+
+    <div class="contact-form warning">Bitte aktiviere JavaScript in deinem Browser um das Kontaktformular nutzen zu können...</div>
+
+  </article>
+
+{{ end }}
+
+{{ define "script" }}
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $('.contact-form').removeClass('warning').html(`
+      <form id="contact-form" action="#">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>E-Mail</label>
+        <input type="email" name="email">
+        <label>Nachricht</label>
+        <textarea name="massage" />
+        <button>Absenden</button>
+      </form>
+    `)
+
+    $(document).on('submit', '#contact-form', function(e) {
+      e.preventDefault();
+      var url = window.atob('aHR0cHM6Ly8yeW55Yjdxd3cxLmV4ZWN1dGUtYXBpLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tL3Byb2QvbWVpbnRvLWdpdGh1Yi1pby1jb250YWN0LWZvcm0=');
+      $.ajax({
+        url: url,
+        type: 'POST',
+        crossDomain: true,
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({
+          message: 'huhu',
+        }),
+        success: function() {
+          console.log('success');
+        }
+      })
+    })
+  </script>
+
+{{ end }}
