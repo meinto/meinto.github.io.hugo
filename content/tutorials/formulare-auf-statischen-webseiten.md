@@ -1,6 +1,6 @@
 ---
 title: "Formulare auf statischen Webseiten einrichten"
-description: ""
+description: "Tutorial: Kontaktformulare auf statischen Websiten wie z. B. Hugo mit AWS Lambda und mailgun einrichten."
 date: 2017-08-26
 draft: false
 tags: ["hugo", "static site generator", "aws", "amazon", "aws lambda", "hosting", "serverless"]
