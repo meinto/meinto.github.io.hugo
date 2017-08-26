@@ -3,6 +3,7 @@ title: "Kontakt"
 description: ""
 date: 2017-08-26
 draft: false
+seo_index: "noindex"
 show_in_meta_nav: "footer"
 type: "contact"
 ---
