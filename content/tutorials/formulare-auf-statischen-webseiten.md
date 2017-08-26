@@ -1,7 +1,7 @@
 ---
 title: "Formulare auf statischen Webseiten einrichten"
 description: ""
-date: 2017-08-25
+date: 2017-08-26
 draft: false
 tags: ["hugo", "static site generator", "aws", "amazon", "aws lambda", "hosting", "serverless"]
 ---
@@ -23,9 +23,9 @@ Die folgenden Drittanbieter bieten einfache Formularlösungen für statische Web
 - {{<link href="https://getsimpleform.com/" target="_blank">}}Simple Form{{</link>}} - optionale Anhänge .
 - {{<link href="https://github.com/stevensona/briskforms" target="_blank">}}Brisk Forms{{</link>}} - E-Mail Adresse bleibt privat.
 
-Da ich datenschutzrechtlich all den angesprochenen Webseiten nicht vertraue, habe ich mich gegen diese einfache Variante entschieden.
+Da ich datenschutzrechtlich allen angesprochenen Webseiten nicht vertraue, habe ich mich gegen diese einfache Variante entschieden.
 
-Es gibt jedoch noch weitere Drittanbieter von Web-Formularen. Diese bieten aber meistens kein einfaches Formular an, welches frei gestaltet werden kann. Entweder ist es schon vorgestyled und muss über Iframes eingebunden werden, oder es handelt sich eher um Umfragen die z. B. in Google Sheets gepushed werden und keine E-Mail auslösen. All das war für mich auch keine Alternative. Nachfolgend trotzdem der Vollständigkeit halber die Links zu den Anbietern:
+Es gibt jedoch noch weitere **Drittanbieter von Web-Formularen**. Diese bieten aber meistens kein einfaches Formular an, welches frei gestaltet werden kann. Entweder ist es schon vorgestyled und muss über Iframes eingebunden werden, oder es handelt sich eher um Umfragen die z. B. in Google Sheets gepushed werden und keine E-Mail auslösen. All das war für mich auch keine Alternative. Nachfolgend trotzdem der Vollständigkeit halber die Links zu den Anbietern:
 
 - {{<link href="https://www.google.com/forms/about/" target="_blank">}}Google Forms{{</link>}} - Speichert die Ergebnisse der Umfrage in Google Sheets. Es gibt eine E-Mail Benachrichtigung wenn jemand eine Umfrage ausgefüllt hat.
 - {{<link href="https://formkeep.com/" target="_blank">}}FormKeep{{</link>}} - Formulare mit Spam Filter, Webhooks für z. B. Gmail, Trello und Basecamp.
@@ -53,7 +53,7 @@ Da Drittanbieter von Formularen für mich wegfielen musste eine eigene Lösung h
 
 Um die Amazon Services nutzen zu können benötigt man lediglich ein Amazon Account, welcher dann auch für die Services freigeschaltet wird. Um loszulegen muss ebenfalls eine Kreditkarte hinterlegt und die Identität durch einen automatischen Telefonanruf (für die Pineingabe) verifiziert werden. Von der Kreditkarte wird nichts abgebucht, solange man sich im freien Kontingent der Services bewegt. {{<link href="https://aws.amazon.com/de/lambda/pricing/" target="_blank">}}Bei Amazon Lambda sind die ersten 1.000.000 Anfragen pro Monat und 400.000 GB/s Datenverarbeitungszeit kostenlos.{{</link>}} Danach kostet es pro weitere Millionen Anfragen 0.20 USD.
 
-Einmal angemeldet kann nun die erste Lambda Funktion unter **Services -> Lambda** angelegt werden. Lambda Funktionen können in den folgenden Sprachen geschrieben werden:
+Einmal angemeldet kann nun die erste Lambda Funktion unter **Services -> Lambda** angelegt werden. Die folgenden Sprachen sind für Lambda Funktionen möglich:
 
 - C#
 - Java 8
@@ -62,11 +62,11 @@ Einmal angemeldet kann nun die erste Lambda Funktion unter **Services -> Lambda*
 - Python 2.7
 - Python 3.6
 
-Diese Einstellung kann in der Konfigurationsansicht der Lambda Funktion eingestellt werden. Hier können ebenfalls **Umgebungsvariablen** definiert, sowie der **Einsprungpunkt der Funktion** angegeben werden.
+Die Sprache einer Funktion wird in der Konfigurationsansicht der Lambda Funktion eingestellt. Hier werden ebenfalls **Umgebungsvariablen** definiert, sowie der **Einsprungpunkt der Funktion** angegeben.
 
 ### Funktion für E-Mail Versand
 
-Für das Script zum Anstoßen des E-Mail Versandes habe ich Python gewählt. Der nachfolgende Code zeigt einen API Aufruf der **mailgun API**. Die entsprechenden Werte wie die **mailgun API Url** oder den **mailgun API Key** habe ich in den bereits angesprochenen **Umgebungsvariablen** der Lambda Funktion hinterlegt. Mit `os.environ['name_der_umgebungsvariable']` können diese in der Funktion abgerufen werden.
+Für das Script – zum Anstoßen des E-Mail Versandes – habe ich Python gewählt. Der nachfolgende Code zeigt einen API Aufruf der **mailgun API**. Die entsprechenden Werte wie die **mailgun API Url** oder den **mailgun API Key** habe ich in den bereits angesprochenen **Umgebungsvariablen** der Lambda Funktion hinterlegt. Mit `os.environ['name_der_umgebungsvariable']` können diese in der Funktion abgerufen werden.
 
 Als Einsprungpunkt habe ich unter **Handler** in der Funktionskonfiguration `index.lambda_handler` eingetragen. Bedeutet: Der Einstiegspunkt für die Routine ist die Funktion `lambda_handler` in der `index.py`.
 
@@ -142,6 +142,6 @@ Das fertige Resultat könnt ihr auf meiner {{<link href="/kontakt">}}Kontakt Sei
 
 ## Risiken von AWS Services
 
-Amazon AWS ist eine tolle Sache. Man kann sich in kurzer Zeit ziemlich viel einfach zusammen klicken. Das tolle aber auch gefährliche an allen Services ist, dass sie ziemlich schnell hoch skalieren wenn die Anfragen steigen. Deshalb habe ich vorsichtshalber das **Event throttling** in der API ziemlich niedrig eingestellt, sodass nur wenige Anfragen auf einmal gestellt werden können.
+Amazon AWS ist eine tolle Sache. Man kann sich in kurzer Zeit ziemlich viel einfach zusammen klicken. Das tolle aber auch gefährliche an allen Services ist, dass sie ziemlich schnell hoch skalieren wenn die Anfragen steigen. Deshalb habe ich vorsichtshalber das **Event throttling** in der API ziemlich niedrig eingestellt, sodass nur wenige Anfragen auf einmal gestellt werden können und ich in der kostenlosen Zohne für die Nutzung der Services bleibe.
 
 Außerdem können im **Cloud Watch Service** Alarme eingestellt werden die E-Mails verschicken, sobald die Nutzung einer Lambda Funktion die durchschnittlichen Grenzwerte überschreitet.  
