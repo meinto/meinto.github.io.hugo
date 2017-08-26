@@ -8,7 +8,7 @@
 
     <h2>Kontaktformular</h2>
 
-    <div class="contact-form warning">Bitte aktiviere JavaScript in deinem Browser um das Kontaktformular nutzen zu können...</div>
+    <div id="contact-form-wrapper" class="warning">Bitte aktiviere JavaScript in deinem Browser um das Kontaktformular nutzen zu können...</div>
 
   </article>
 
@@ -22,7 +22,7 @@
     crossorigin="anonymous"></script>
 
   <script>
-    $('.contact-form').removeClass('warning').html(`
+    $('#contact-form-wrapper').removeClass('warning').html(`
       <form id="contact-form" action="#" class="row">
         <fieldset class="small-12 medium-6 columns">
           <label>Name*</label>
@@ -63,7 +63,7 @@
             message: message,
           }),
           success: function() {
-            console.log('success');
+            $('#contact-form-wrapper').addClass('success').html('Nachricht wurde erfolgreich übermittelt. Ich melde mich sobald ich kann...');
           }
         })
       } else {

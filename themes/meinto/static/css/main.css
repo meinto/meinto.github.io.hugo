@@ -149,8 +149,9 @@ figure.project img {
   max-height: 300px;
 }
 
-.contact-form.warning {
-  background-color: yellowgreen;
+#contact-form-wrapper.success,
+#contact-form-wrapper.warning {
+  background-color: #7CB342;
   padding: 10px;
   margin-bottom: 20px;
 }
