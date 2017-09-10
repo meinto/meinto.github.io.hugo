@@ -10,4 +10,30 @@
 
   </article>
 
+  <section>
+  
+    <h2>Kommentare</h2>
+
+    <div id="disqus_thread"></div>
+    <noscript>Bitte aktiviere JavaScript in deinem Browser um Kommentare lesen zu können...</noscript>
+  
+  </section>
+{{ end }}
+
+{{ define "script" }}
+
+  <script>
+
+    var disqus_config = function () {
+      this.page.url = {{ .Permalink }};  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = {{ replace .Permalink .Site.BaseURL "" }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://meinto-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
 {{ end }}

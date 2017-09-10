@@ -7,7 +7,6 @@ draft: false
 ## Private Projekte
 
 {{< row >}}
-
 {{< col class="small-12 medium-6">}}
 
 {{% project name="react-native-mirror" url="https://github.com/meinto/react-native-mirror" image="images/projects/react-native-mirror.gif" %}}
@@ -23,8 +22,6 @@ react-native-viewpager-carousel stellt einen einfachen ViewPager sowie einen Vie
 {{%/ project %}}
 
 {{</ col >}}
-
 {{</ row >}}
-
 
 {{< clear >}}
