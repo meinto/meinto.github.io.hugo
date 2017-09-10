@@ -1,5 +1,10 @@
 baseURL = "https://meinto.github.io/"
 copyright = "© Tobias Meinhardt {year}"
-languageCode = "en-us"
+languageCode = "de-DE
 title = "Tobias Meinhardt"
 theme = "meinto"
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "rss"

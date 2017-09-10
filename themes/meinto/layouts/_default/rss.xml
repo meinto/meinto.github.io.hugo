@@ -1,0 +1,42 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+      {{ if eq  .Title  .Site.Title }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ with .Title }}{{.}}{{ end }}
+      {{ end }}
+    </title>
+    <link>{{ .Permalink }}</link>
+    <description>
+      {{ if eq  .Title  .Site.Title }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ with .Title }}{{.}}{{ end }}
+      {{ end }}  
+    </description>
+    {{ with .Site.LanguageCode }}
+      <language>{{.}}</language>
+    {{end}}
+    {{ with .Site.Copyright }}
+      <copyright>{{.}}</copyright>
+    {{end}}
+    {{ with .OutputFormats.Get "RSS" }}
+        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    {{ range .Data.Pages }}
+      {{ if and (ne (index .Params "seo_index") "noindex") (not (in .Permalink "/tags/")) (not (in .Permalink "/categories/")) }}
+        <item>
+          <title>{{ .Title }}</title>
+          <link>{{ .Permalink }}</link>
+          {{ with .Date }}
+            <pubDate>{{ .Format "02.01.2006" }}</pubDate>
+          {{ end }}
+          {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+          <guid>{{ .Permalink }}</guid>
+          <description>{{ .Summary | html }}</description>
+        </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>
