@@ -1,6 +1,6 @@
 baseURL = "https://meinto.github.io/"
 copyright = "© Tobias Meinhardt {year}"
-languageCode = "de-DE
+languageCode = "de-DE"
 title = "Tobias Meinhardt"
 theme = "meinto"
 
