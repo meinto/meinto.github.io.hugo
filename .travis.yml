@@ -9,8 +9,7 @@ install:
   - git clone --recursive -j8 https://github.com/meinto/meinto.github.io.hugo.git
   - cd meinto.github.io.hugo
 
-script:
-	- hugo --verbose
+script: hugo --verbose
 
 before_deploy:
   - cd public
