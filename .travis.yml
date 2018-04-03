@@ -1,13 +1,8 @@
 language: go
 
-before_install:
-  - go get github.com/kardianos/govendor
-  - govendor get github.com/gohugoio/hugo
-  - go get -v github.com/gohugoio/hugo
+go: master
 
-install:
-  - git clone --recursive -j8 https://github.com/meinto/meinto.github.io.hugo.git
-  - cd meinto.github.io.hugo
+install: go get github.com/spf13/hugo
 
 script: hugo --verbose
 
