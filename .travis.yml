@@ -7,7 +7,11 @@ install: go get github.com/spf13/hugo
 script: hugo --verbose
 
 before_deploy:
-  - cd public
+  - cd ..
+  - mv meinto.github.io.hugo _meinto.github.io.hugo
+  - mkdir meinto.github.io.hugo
+  - cp -R _meinto.github.io.hugo/public/* meinto.github.io.hugo
+  - cd meinto.github.io.hugo
   - ls -la
 
 deploy:
