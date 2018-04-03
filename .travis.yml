@@ -10,7 +10,7 @@ install:
   - git clone --recursive -j8 https://github.com/meinto/meinto.github.io.hugo.git
   - cd meinto.github.io.hugo
 
-script:
+before_deploy:
   - /snap/bin/hugo
   - cd public
   - ls -la
