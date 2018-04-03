@@ -24,4 +24,15 @@ react-native-viewpager-carousel stellt einen einfachen ViewPager sowie einen Vie
 {{</ col >}}
 {{</ row >}}
 
+{{< row >}}
+{{< col >}}
+
+{{% project name="crypto-einsteiger.de" url="https://crypto-einsteiger.de" %}}
+Bei crypto-einsteiger.de handelt es sich um eine Webseite auf der Begriffe der Kryptografie erklärt werden. 
+Außerdem schreiben wir viele Tutorials rund um das Thema Kryptowährungen und stellen diese vor.
+{{% project %}}
+
+{{</ col >}}
+{{</ row >}}
+
 {{< clear >}}
