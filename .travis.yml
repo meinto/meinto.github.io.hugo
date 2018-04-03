@@ -1,17 +1,18 @@
-language: none
+language: go
 
-sudo: true
-dist: trusty
+before_install:
+  - go get github.com/kardianos/govendor
+  - govendor get github.com/gohugoio/hugo
+  - go install github.com/gohugoio/hugo
 
 install:
-  - sudo apt-get --yes install snapd
-  - sudo snap install hugo
-  - sudo apt-get install python3-pygments
   - git clone --recursive -j8 https://github.com/meinto/meinto.github.io.hugo.git
   - cd meinto.github.io.hugo
 
+script:
+	- hugo --verbose
+
 before_deploy:
-  - /snap/bin/hugo
   - cd public
   - ls -la
 
