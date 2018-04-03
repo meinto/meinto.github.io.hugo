@@ -25,7 +25,7 @@ react-native-viewpager-carousel stellt einen einfachen ViewPager sowie einen Vie
 {{</ row >}}
 
 {{< row >}}
-{{< col >}}
+{{< col class="small-12 medium-6">}}
 
 {{% project name="crypto-einsteiger.de" url="https://crypto-einsteiger.de" 
 image="images/projects/crypto-einsteiger.de.png" %}}
